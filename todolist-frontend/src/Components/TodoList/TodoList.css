@@ -1,0 +1,33 @@
+.container {
+    background-color: green;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .todoList {
+        background-color: white;
+        width: 70rem;
+        height: 40rem;
+        border-radius: 1rem;
+
+        & .headerTodo {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 2.5rem 0 2.5rem;
+        }
+
+        & .todos {
+            width: 65rem;
+            min-height: 35rem;
+            background-color: whitesmoke;
+            margin: 1rem 0 0 2.5rem;
+
+            & ul li{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
