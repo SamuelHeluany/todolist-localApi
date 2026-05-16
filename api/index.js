@@ -8,12 +8,20 @@ app.use(express.json())
 
 let todos = [{id: uuidv4(), title: "Tarefa 1", status: "Pendente"}]
 
-app.get("/todos", (req, res) => res.json(todos))
+app.get("/todos", (req, res) => 
+    res.json({
+        content: todos,
+        totalElements: todos.length,
+        message: "Ok!"
+    }))
 
 app.post("/todos", (req, res) => {
     const todo = { id: uuidv4(), ...req.body}
     todos.push(todo)
-    res.status(201).json(todo)
+    res.status(201).json({
+        content:[todo],
+        message: "Task created!"
+    })
 })
 
 
