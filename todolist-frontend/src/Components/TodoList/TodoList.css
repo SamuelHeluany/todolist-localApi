@@ -1,5 +1,7 @@
 .container {
-    background-color: green;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -14,19 +16,60 @@
         & .headerTodo {
             display: flex;
             justify-content: space-between;
-            margin: 0 2.5rem 0 2.5rem;
+            margin: 1rem 2.5rem 0 2.5rem;
+
+            & h1 {
+                font-size: 3rem;
+                font-family: "SN Pro", sans-serif;
+                color: #002765;
+            }
+
+            & .todoCreateButton {
+                width: 10rem;
+                font-size: 1.7rem;
+                font-family: "SN Pro", sans-serif;
+                font-weight: bold;
+                border-radius: .5rem;
+                border: none;
+                background-color: #FF5945;
+                color: white;
+            }
+
+            & .todoCreateButton:hover {
+                cursor: pointer;
+                background-color: #f84835;
+
+            }
         }
 
         & .todos {
             width: 65rem;
             min-height: 35rem;
-            background-color: whitesmoke;
             margin: 1rem 0 0 2.5rem;
 
-            & ul li{
+            & ul li {
                 list-style: none;
                 display: flex;
                 justify-content: space-between;
+                font-size: 2.5rem;
+                height: 5rem;
+                align-items: center;
+                color: black;
+                border-bottom: .5px solid rgb(2, 61, 112);
+
+                & .actions {
+                    display: flex;
+                    gap: .5rem;
+
+                    & button {
+                        background-color: transparent;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: .5rem;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
